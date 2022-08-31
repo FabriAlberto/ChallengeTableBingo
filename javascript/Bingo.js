@@ -15,7 +15,7 @@ let table = [
 const random = (min, max) => {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 }
-/*Se encarga de chequear que los números anteriores no sean mayores
+/*check Se encarga de chequear que los números anteriores no sean mayores
 dependiendo la posición
 */
 const check = (pos, num, num1, num2) => {
@@ -37,7 +37,7 @@ const check = (pos, num, num1, num2) => {
     }
     else table[pos][num] = random(num1, num2)
 }
-/* Dependiendo la posición de la columna llenará
+/* fillTable Dependiendo la posición de la columna llenará
 con un número ; por ej.: en la columna 1(case 1) llena con números del 1 al 9
 columna 2 (case 2) llena con números del 10 al 19
  */
@@ -138,7 +138,7 @@ const generateDifferentNumber = () => {
     return numRandom
 
 }
-/* Genera indicies para los números de la segunda fila
+/*generateSecondRow Genera indicies para los números de la segunda fila
 y exige que al menos sean cuatro posiciones distintas a
 la fila anterior, para así poder corroborar que haya
 por lo menos un número por columna, como lo pide en la consigna
@@ -159,7 +159,7 @@ const generateSecondRow = (row1) => {
     } while (cont > 0)
     return arraySameNumbers
 }
-/*Genera índices para los números de la tercer fila, comprobando
+/*generateThirdRow  Genera índices para los números de la tercer fila, comprobando
 que en los lugares anteriores de la columna no haya dos numeros, ya que
 uno de los puntos indica que solo puede haber 1 o 2 números por columna
  */
